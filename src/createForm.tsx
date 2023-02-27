@@ -109,7 +109,17 @@ export function createForm<T extends PrimitiveRecord>(
     const toFormData = React.useCallback(() => {
       const formData = new FormData();
       Object.keys(complexState).forEach((key) => {
-        formData.set(key, `${complexState[key]}`);
+        const fileList = files.current[key];
+        if (fileList) {
+          for (let i = 0; i < fileList.length; i++) {
+            const file = fileList.item(i);
+            if (file !== null) {
+              formData.append(key, file, file.name);
+            }
+          }
+        } else {
+          formData.set(key, `${complexState[key]}`);
+        }
       });
       return formData;
     }, [complexState]);

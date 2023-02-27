@@ -12,9 +12,7 @@ const DEFAULT_LOGIN: FileListForm = {
   myFileField: '',
 };
 
-const OPTIONS: UseFormOptions<FileListForm> = {};
-
-const FileListForm = createForm<FileListForm>(OPTIONS);
+const FileListForm = createForm<FileListForm>();
 
 function withFileListForm() {
   return (
@@ -38,7 +36,6 @@ function FileListFormComponent() {
         name={form.myFileField.name}
         onChange={form.myFileField.handleFileEvent}
         id={form.myFileField.name}
-        autoComplete="off"
       />
       <button onClick={() => form.resetAll()}>Reset</button>
       <pre>{JSON.stringify(form, null, 2)}</pre>
