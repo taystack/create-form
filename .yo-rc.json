@@ -1,0 +1,22 @@
+{
+  "@anansi/generator-js": {
+    "githubOrg": "taystack",
+    "rootPath": "src",
+    "assetPath": "dist",
+    "serverPath": "dist-server",
+    "appName": "use-form",
+    "githubDomain": "github.com",
+    "testing": true,
+    "features": [
+      "storybook",
+      "testing",
+      "CI"
+    ],
+    "badges": "[![CircleCI](https://circleci.com/gh/taystack/use-form.svg?style=shield)](https://circleci.com/gh/taystack/use-form)\n\n[![npm downloads](https://img.shields.io/npm/dm/use-form.svg?style=flat-square)](https://www.npmjs.com/package/use-form)\n[![gzip size](https://img.badgesize.io/https://unpkg.com/use-form?compression=gzip&style=flat-square)](https://unpkg.com/use-form)\n[![npm version](https://img.shields.io/npm/v/use-forms.svg?style=flat-square)](https://www.npmjs.com/package/use-form)\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)",
+    "storybook": true,
+    "libPath": "lib",
+    "webpack": true,
+    "style": "linaria",
+    "devssl": false
+  }
+}
